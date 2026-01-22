@@ -44,8 +44,33 @@ body.mode-professional #view-professional { display: block; max-width: 800px; ma
 .cv-header { text-align: center; margin-bottom: 40px; }
 .cv-header h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
 .cv-content { display: grid; gap: 30px; }
-.cv-item { margin-bottom: 20px; border-left: 3px solid #333; padding-left: 15px; }
-.cv-item .date { color: #666; font-style: italic; font-size: 0.9rem; }
+.cv-item { 
+    margin-bottom: 20px; 
+    border-left: 3px solid #333; 
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.cv-item .cv-text { flex: 1; }
+.cv-item .date { color: #666; font-style: italic; font-size: 0.9rem; display: block; margin-bottom: 5px; }
+.cv-logo-link { display: block; flex-shrink: 0; }
+.cv-logo-img { 
+    max-width: 80px; 
+    max-height: 80px; 
+    width: auto; 
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+.cv-logo-link:hover .cv-logo-img { transform: scale(1.1); }
+
+@media (max-width: 600px) {
+    .cv-item { flex-direction: column-reverse; align-items: flex-start; }
+    .cv-logo-link { margin-bottom: 10px; align-self: flex-end; }
+}
 
 /* =========================================
    MODE 2: CODING (Neocities / Retro)
@@ -67,9 +92,14 @@ body.mode-coding .nav-btn { font-family: 'Courier New', monospace; }
 
 .scrolling-text { background: #0f0; color: #000; font-weight: bold; font-size: 1.2rem; margin: 20px 0; }
 .retro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.retro-box { border: 1px dashed #0f0; padding: 15px; }
-.retro-box h3 { border-bottom: 1px solid #0f0; margin-bottom: 10px; }
+.retro-box { border: 1px dashed #0f0; padding: 15px; background: rgba(0, 255, 0, 0.05); }
+.retro-box.full-width { grid-column: 1 / -1; }
+.retro-box h3 { border-bottom: 1px solid #0f0; margin-bottom: 10px; color: #0f0; }
 .retro-box ul { list-style: none; }
+.retro-box li { margin-bottom: 10px; line-height: 1.2; }
+.retro-box li a { color: #0f0; text-decoration: none; font-weight: bold; border: 1px solid #0f0; padding: 2px 5px; margin-right: 5px; }
+.retro-box li a:hover { background: #0f0; color: #000; }
+.repo-meta { font-size: 0.8rem; opacity: 0.8; margin-top: 4px; }
 
 @media (max-width: 600px) { .retro-grid { grid-template-columns: 1fr; } }
 

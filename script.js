@@ -80,21 +80,34 @@ const demoFiles = [
         const repoList = document.getElementById('repo-list');
 
         try {
-            // Fetch Repos
-            const repoResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&direction=desc`);
-            const repos = await repoResponse.json();
+            // Fetch Repos (excluding the profile README repo and fork)
+            const repoResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=10`);
+            let repos = await repoResponse.json();
+            
+            // Filter out the special profile repo if desired, and limit to 6
+            repos = repos.filter(repo => repo.name !== username).slice(0, 6);
             
             repoList.innerHTML = ''; // Clear loading message
-            repos.slice(0, 5).forEach(repo => {
+
+            repos.forEach(repo => {
                 const li = document.createElement('li');
-                li.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>: ${repo.description || 'No description'}`;
+                const lastUpdate = new Date(repo.updated_at).toLocaleDateString();
+                li.innerHTML = `
+                    <div>
+                        <a href="${repo.html_url}" target="_blank">/usr/bin/${repo.name}</a>
+                    </div>
+                    <div class="repo-meta">
+                        > DESC: ${repo.description || 'No description provided.'}<br>
+                        > LANG: ${repo.language || 'Mixed'} | STARS: ${repo.stargazers_count} | UPDATED: ${lastUpdate}
+                    </div>
+                `;
                 repoList.appendChild(li);
             });
 
             view.setAttribute('data-loaded', 'true');
 
         } catch (error) {
-            repoList.innerHTML = '<li>Error loading repositories.</li>';
+            repoList.innerHTML = '<li>[ERROR] Failed to establish connection to GitHub API.</li>';
             console.error('Error fetching GitHub data:', error);
         }
     }
