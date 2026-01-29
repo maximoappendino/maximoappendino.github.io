@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const demosGrid = document.getElementById('demos-grid');
 const demoFiles = [
             { audioSrc: 'coffee-ad.wav', imageSrc: 'img/barista.png', title: 'Coffee Advertisement', description: 'Rise & Grind.' },
-            { audioSrc: 'demo2.wav', imageSrc: 'img/demo2.jpg', title: 'Documentary about italy', description: 'A documentary about architecure in Italy.' },
+            { audioSrc: 'alpura-demo.wav', imageSrc: 'img/cow-argentinian.png', title: 'Publicidad Alpura', description: 'Publicidad de leche Alpura' },
             { audioSrc: 'demo3.wav', imageSrc: 'img/demo3.jpg', title: 'Old Commercial', description: 'A clasic old commercial with that static noise.' }
         ];
 
