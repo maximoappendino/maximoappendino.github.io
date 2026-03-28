@@ -55,6 +55,7 @@ body.mode-professional #view-professional { display: block; max-width: 800px; ma
 }
 .cv-item .cv-text { flex: 1; }
 .cv-item .date { color: #666; font-style: italic; font-size: 0.9rem; display: block; margin-bottom: 5px; }
+.cv-item .location { color: #888; font-size: 0.85rem; display: block; margin-bottom: 2px; }
 .cv-logo-link { display: block; flex-shrink: 0; }
 .cv-logo-img { 
     max-width: 80px; 
