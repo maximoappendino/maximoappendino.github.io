@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const demoFiles = [
             { audioSrc: 'coffee-ad.wav', imageSrc: 'img/barista.png', title: 'Coffee Advertisement', description: 'Rise & Grind.' },
             { audioSrc: 'alpura-demo.wav', imageSrc: 'img/cow-argentinian.png', title: 'Publicidad Alpura', description: 'Publicidad de leche Alpura' },
-            { audioSrc: 'demo3.wav', imageSrc: 'img/demo3.jpg', title: 'Old Commercial', description: 'A clasic old commercial with that static noise.' }
+            { audioSrc: 'demo.wav', imageSrc: 'img/demo3.jpg', title: 'Old Commercial', description: 'A clasic old commercial with that static noise.' }
         ];
 
         demosGrid.innerHTML = ''; // Clear loading message
