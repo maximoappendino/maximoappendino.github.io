@@ -112,6 +112,42 @@ const demoFiles = [
         }
     }
 
+    // --- MODAL LOGIC (BLOG) ---
+    const blogModal = document.getElementById('blog-modal');
+    const modalBody = document.getElementById('modal-body');
+    const closeModal = document.querySelector('.close-modal');
+
+    function openBlog(blogId) {
+        const contentSource = document.getElementById(`content-${blogId}`);
+        if (contentSource) {
+            modalBody.innerHTML = contentSource.innerHTML;
+            blogModal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        } else {
+            console.error(`Blog content not found for ID: ${blogId}`);
+        }
+    }
+
+    function closeBlog() {
+        blogModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+
+    // Attach click listeners to blog cards
+    document.querySelectorAll('.blog-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const blogId = card.getAttribute('data-blog-id');
+            openBlog(blogId);
+        });
+    });
+
+    closeModal.addEventListener('click', closeBlog);
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === blogModal) closeBlog();
+    });
+
     // --- EVENT LISTENERS (CLICK) ---
     navButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -122,6 +158,12 @@ const demoFiles = [
 
     // --- EVENT LISTENERS (KEYBOARD) ---
     document.addEventListener('keydown', (e) => {
+        // Close modal on Escape
+        if (e.key === 'Escape' && blogModal.style.display === 'block') {
+            closeBlog();
+            return;
+        }
+
         // Check if key is 1, 2, 3, 4, or 5
         if (['1', '2', '3', '4', '5'].includes(e.key)) {
             setMode(parseInt(e.key));
