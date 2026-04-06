@@ -166,6 +166,7 @@ const demoFiles = [
 
         // Check if key is 1, 2, 3, 4, or 5
         if (['1', '2', '3', '4', '5'].includes(e.key)) {
+            if (e.altKey) return;
             setMode(parseInt(e.key));
         }
     });
