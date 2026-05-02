@@ -123,20 +123,16 @@ body { font-family: sans-serif; overflow-x: hidden; }
    MODE 1: PROFESSIONAL (CV Style)
    ========================================= */
 body.mode-professional { background-color: #ffffff; color: #333; font-family: 'Georgia', serif; }
-body.mode-professional #view-professional { display: block; max-width: 1400px; margin: 0 auto; padding: 30px 15px; }
+body.mode-professional #view-professional { display: block; max-width: 1100px; margin: 0 auto; padding: 30px 15px; }
 
 .cv-container {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: flex-start;
 }
 
 .cv-sidebar {
-<<<<<<< HEAD
-    flex: 0 0 300px;
-=======
     flex: 0 0 280px;
->>>>>>> dev
     position: sticky;
     top: 70px;
     max-height: calc(100vh - 90px);
@@ -148,39 +144,22 @@ body.mode-professional #view-professional { display: block; max-width: 1400px; m
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
-.cv-right-sidebar {
-    flex: 0 0 300px;
-    position: sticky;
-    top: 70px;
-    max-height: calc(100vh - 90px);
-    overflow-y: auto;
-    padding: 25px;
-    background: #fcfcfc;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-}
-
-/* Custom scrollbar for sidebars */
-.cv-sidebar::-webkit-scrollbar,
-.cv-right-sidebar::-webkit-scrollbar {
+/* Custom scrollbar for sidebar */
+.cv-sidebar::-webkit-scrollbar {
     width: 6px;
 }
 
-.cv-sidebar::-webkit-scrollbar-track,
-.cv-right-sidebar::-webkit-scrollbar-track {
+.cv-sidebar::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
 }
 
-.cv-sidebar::-webkit-scrollbar-thumb,
-.cv-right-sidebar::-webkit-scrollbar-thumb {
+.cv-sidebar::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 10px;
 }
 
-.cv-sidebar::-webkit-scrollbar-thumb:hover,
-.cv-right-sidebar::-webkit-scrollbar-thumb:hover {
+.cv-sidebar::-webkit-scrollbar-thumb:hover {
     background: #aaa;
 }
 
@@ -243,6 +222,10 @@ body.mode-professional #view-professional { display: block; max-width: 1400px; m
     font-size: 1rem;
 }
 
+.software-category li a:hover i {
+    color: #e67e22;
+}
+
 .software-category .years {
     margin-left: auto;
     font-size: 0.8rem;
@@ -250,66 +233,6 @@ body.mode-professional #view-professional { display: block; max-width: 1400px; m
     font-family: sans-serif;
     font-weight: bold;
     white-space: nowrap;
-}
-
-.software-category {
-    margin-bottom: 20px;
-}
-
-.software-category h5 {
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 3px;
-}
-
-.software-category ul {
-    list-style: none;
-    padding: 0;
-}
-
-.software-category li {
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #444;
-}
-
-.software-category li a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-}
-
-.software-category li a:hover {
-    color: #e67e22;
-}
-
-.software-category i {
-    width: 18px;
-    text-align: center;
-    color: #333;
-    font-size: 0.9rem;
-}
-
-.software-category li a:hover i {
-    color: #e67e22;
-}
-
-.software-category .years {
-    margin-left: auto;
-    font-size: 0.75rem;
-    color: #888;
-    font-family: sans-serif;
-    font-weight: bold;
 }
 
 .portrait-container {
@@ -436,19 +359,7 @@ body.mode-professional #view-professional { display: block; max-width: 1400px; m
 }
 .cv-logo-link:hover .cv-logo-img { transform: scale(1.05); filter: grayscale(0%); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-<<<<<<< HEAD
-@media (max-width: 1400px) {
-    .cv-sidebar, .cv-right-sidebar { flex: 0 0 260px; }
-}
-
-@media (max-width: 1100px) {
-    .cv-right-sidebar { display: none; } /* Still hide on tablets to prioritize main content */
-}
-
-@media (max-width: 950px) {
-=======
 @media (max-width: 800px) {
->>>>>>> dev
     .cv-container {
         flex-direction: column;
         gap: 20px;
@@ -461,25 +372,17 @@ body.mode-professional #view-professional { display: block; max-width: 1400px; m
         box-sizing: border-box;
         padding: 20px;
     }
-    .cv-right-sidebar {
-        display: block; /* Show at bottom only on mobile */
-        flex: none;
-        width: 100%;
-        position: static;
-        box-sizing: border-box;
-        padding: 20px;
-    }
-    .cv-right-sidebar {
-        display: block;
-        flex: none;
-        width: 100%;
-        position: static;
-        box-sizing: border-box;
-        padding: 20px;
-    }
     .portrait-container {
         max-width: 150px;
         margin: 0 auto 25px;
+    }
+    .sidebar-section {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    .sidebar-section h4 {
+        display: block;
+        width: 100%;
     }
     .cv-header { text-align: center; }
 }
@@ -795,10 +698,7 @@ body.mode-personal #view-personal { display: block; max-width: 1000px; margin: 0
     display: none;
     position: fixed;
     z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: 0; top: 0; width: 100%; height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.8);
     backdrop-filter: blur(5px);
@@ -834,24 +734,11 @@ body.mode-personal #view-personal { display: block; max-width: 1000px; margin: 0
     line-height: 1;
 }
 
-.close-modal:hover {
-    color: #e74c3c;
-}
+.close-modal:hover { color: #e74c3c; }
 
-#modal-body h1 {
-    margin-bottom: 25px;
-    font-size: 2.2rem;
-}
-
-#modal-body p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-#modal-body .back-link {
-    display: none; /* Hide the back link inside the modal */
-}
+#modal-body h1 { margin-bottom: 25px; font-size: 2.2rem; }
+#modal-body p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; }
+#modal-body .back-link { display: none; }
 
 @media (max-width: 600px) {
     .modal-content {
