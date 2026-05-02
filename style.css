@@ -132,7 +132,7 @@ body.mode-professional #view-professional { display: block; max-width: 1100px; m
 }
 
 .cv-sidebar {
-    flex: 0 0 260px;
+    flex: 0 0 280px;
     position: sticky;
     top: 70px;
     max-height: calc(100vh - 90px);
@@ -165,7 +165,70 @@ body.mode-professional #view-professional { display: block; max-width: 1100px; m
 
 .cv-main {
     flex: 1;
-    min-width: 0; /* Prevents flex items from overflowing */
+    min-width: 0;
+}
+
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.software-category {
+    margin-bottom: 20px;
+}
+
+.software-category h5 {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.software-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.software-category li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #444;
+}
+
+.software-category li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.software-category li a:hover {
+    color: #e67e22;
+}
+
+.software-category i {
+    width: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+}
+
+.software-category .years {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #888;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .portrait-container {
@@ -292,7 +355,7 @@ body.mode-professional #view-professional { display: block; max-width: 1100px; m
 }
 .cv-logo-link:hover .cv-logo-img { transform: scale(1.05); filter: grayscale(0%); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-@media (max-width: 950px) {
+@media (max-width: 800px) {
     .cv-container {
         flex-direction: column;
         gap: 20px;
@@ -302,6 +365,14 @@ body.mode-professional #view-professional { display: block; max-width: 1100px; m
         width: 100%;
         position: static;
         display: block; /* Stack vertically for better readability on Android */
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .cv-right-sidebar {
+        display: block;
+        flex: none;
+        width: 100%;
+        position: static;
         box-sizing: border-box;
         padding: 20px;
     }
