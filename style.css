@@ -132,16 +132,93 @@ body.mode-professional #view-professional { display: block; max-width: 1100px; m
 }
 
 .cv-sidebar {
-    flex: 0 0 280px;
+    flex: 0 0 320px;
     position: sticky;
     top: 70px;
     max-height: calc(100vh - 90px);
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 25px;
     background: #f9f9f9;
     border-radius: 12px;
     border: 1px solid #eee;
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.sidebar-section p {
+    word-break: break-word;
+}
+
+/* --- LANGUAGE SLIDER --- */
+.lang-container {
+    position: fixed;
+    top: 160px; /* Below the whatsapp button */
+    right: 20px;
+    z-index: 1001;
+}
+
+.lang-slider {
+    background: #34495e;
+    padding: 4px;
+    border-radius: 50px;
+    display: flex;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 150px;
+}
+
+.lang-opt {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 8px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s;
+    text-align: center;
+}
+
+.lang-opt.active {
+    color: #fff;
+}
+
+.lang-slider-bg {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 46px; /* (150 - 8 padding) / 3 approx */
+    height: calc(100% - 8px);
+    background: #27ae60;
+    border-radius: 50px;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Adjust bg position based on active language */
+.lang-container[data-lang="en"] .lang-slider-bg { left: 4px; }
+.lang-container[data-lang="es"] .lang-slider-bg { left: 52px; }
+.lang-container[data-lang="it"] .lang-slider-bg { left: 100px; }
+
+@media (max-width: 650px) {
+    .schedule-btn {
+        top: auto;
+        bottom: 155px;
+        right: 20px;
+    }
+    .whatsapp-btn {
+        top: auto;
+        bottom: 95px;
+        right: 20px;
+    }
+    .lang-container {
+        top: auto;
+        bottom: 30px;
+        right: 20px;
+    }
 }
 
 /* Custom scrollbar for sidebar */

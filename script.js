@@ -148,6 +148,121 @@ const demoFiles = [
         if (e.target === blogModal) closeBlog();
     });
 
+    // --- LANGUAGE SWITCHER ---
+    const langContainer = document.querySelector('.lang-container');
+    const langOpts = document.querySelectorAll('.lang-opt');
+
+    const translations = {
+        en: {
+            nav1: '1. CV',
+            nav2: '2. Demos',
+            nav3: '3. Coding',
+            nav4: '4. Personal',
+            nav5: '5. Future',
+            schedule: 'Schedule Interview',
+            whatsapp: 'WhatsApp Me',
+            cvTitle: 'Salesman, Software Developer, Voice Actor & Medical, Legal, Financial Interpreter',
+            expTitle: 'Work Experience (Newest to oldest)',
+            eduTitle: 'Education',
+            softTitle: 'Software Experience',
+            howTo: 'How to use this website',
+            howToDesc: 'I recommend navigating through the tabs at the top by clicking them or typing 1, 2, 3, 4, 5 while on the page.',
+            notes: 'Notes',
+            pdfNote: 'If you are viewing this via PDF, you can access my complete portfolio at:'
+        },
+        es: {
+            nav1: '1. CV',
+            nav2: '2. Demos',
+            nav3: '3. Programación',
+            nav4: '4. Personal',
+            nav5: '5. Futuro',
+            schedule: 'Agendar Entrevista',
+            whatsapp: 'WhatsApp',
+            cvTitle: 'Vendedor, Desarrollador de Software, Actor de Voz e Intérprete Médico, Legal y Financiero',
+            expTitle: 'Experiencia Laboral (Más reciente a más antigua)',
+            eduTitle: 'Educación',
+            softTitle: 'Experiencia en Software',
+            howTo: 'Cómo usar este sitio',
+            howToDesc: 'Recomiendo navegar a través de las pestañas superiores haciendo clic en ellas o presionando 1, 2, 3, 4 o 5 en el teclado.',
+            notes: 'Notas',
+            pdfNote: 'Si estás viendo esto vía PDF, puedes acceder a mi portafolio completo en:'
+        },
+        it: {
+            nav1: '1. CV',
+            nav2: '2. Demo',
+            nav3: '3. Coding',
+            nav4: '4. Personale',
+            nav5: '5. Futuro',
+            schedule: 'Fissa un colloquio',
+            whatsapp: 'WhatsApp',
+            cvTitle: 'Venditore, Sviluppatore Software, Doppiatore e Interprete Medico, Legale, Finanziario',
+            expTitle: 'Esperienza Lavorativa (Dalla più recente)',
+            eduTitle: 'Istruzione',
+            softTitle: 'Esperienza Software',
+            howTo: 'Come usare questo sito',
+            howToDesc: 'Consiglio di navigare tra le schede in alto cliccandole o digitando 1, 2, 3, 4, 5 mentre sei sulla pagina.',
+            notes: 'Note',
+            pdfNote: 'Se stai visualizzando questo tramite PDF, puoi accedere al mio portfolio completo su:'
+        }
+    };
+
+    function updateLanguage(lang) {
+        const t = translations[lang];
+        
+        // Update data attribute for CSS animation
+        if(langContainer) langContainer.setAttribute('data-lang', lang);
+        
+        // Update Nav
+        document.querySelector('.nav-btn[data-mode="1"]').textContent = t.nav1;
+        document.querySelector('.nav-btn[data-mode="2"]').textContent = t.nav2;
+        document.querySelector('.nav-btn[data-mode="3"]').textContent = t.nav3;
+        document.querySelector('.nav-btn[data-mode="4"]').textContent = t.nav4;
+        document.querySelector('.nav-btn[data-mode="5"]').textContent = t.nav5;
+
+        // Update Floating Buttons
+        document.querySelector('.schedule-btn').innerHTML = `<i class="fas fa-calendar-check"></i> ${t.schedule}`;
+        document.querySelector('.whatsapp-btn').innerHTML = `<i class="fab fa-whatsapp"></i> ${t.whatsapp}`;
+
+        // Update CV Header
+        const cvHeaderP = document.querySelector('.cv-header p');
+        if (cvHeaderP) cvHeaderP.textContent = t.cvTitle;
+
+        // Update Section Titles
+        const sections = document.querySelectorAll('.cv-section h3');
+        if (sections.length >= 3) {
+            sections[0].textContent = t.expTitle;
+            sections[1].textContent = t.eduTitle;
+            sections[2].textContent = t.softTitle;
+        }
+
+        // Update Footer
+        const footerH3s = document.querySelectorAll('.cv-main > div > h3');
+        if (footerH3s.length >= 2) {
+            footerH3s[0].textContent = t.howTo;
+            footerH3s[1].textContent = t.notes;
+        }
+        const footerPs = document.querySelectorAll('.cv-main > div > p');
+        if (footerPs.length >= 2) {
+            footerPs[0].textContent = t.howToDesc;
+            footerPs[1].textContent = t.pdfNote;
+        }
+
+        // Update active class
+        langOpts.forEach(opt => {
+            opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+        });
+    }
+
+    langOpts.forEach(opt => {
+        opt.addEventListener('click', () => {
+            const lang = opt.getAttribute('data-lang');
+            updateLanguage(lang);
+        });
+    });
+
+    // Initialize default state
+    if(langContainer) langContainer.setAttribute('data-lang', 'en');
+
     // --- EVENT LISTENERS (CLICK) ---
     navButtons.forEach(btn => {
         btn.addEventListener('click', () => {
