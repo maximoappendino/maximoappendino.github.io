@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maximo Appendino | Full Stack Developer & Translator</title>
     <meta name="description" content="Professional Portfolio of Maximo Appendino. Software Developer, English/Spanish Translator, and Voice Actor. View my work experience, coding projects, and demos.">
-    
+
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maximoappendino.github.io/">
@@ -31,475 +31,105 @@
     <!-- LinkedIn Badge -->
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
-<body class="mode-professional"> <nav id="main-nav">
-        <button data-mode="1" class="nav-btn active">1. CV</button>
-        <button data-mode="2" class="nav-btn">2. Demos</button>
-        <button data-mode="3" class="nav-btn">3. Coding</button>
-        <button data-mode="4" class="nav-btn">4. Personal</button>
-        <button data-mode="5" class="nav-btn">5. Future</button>
+<body class="mode-professional">
+
+    <nav id="main-nav">
+        <button data-mode="1" class="nav-btn active"></button>
+        <button data-mode="2" class="nav-btn"></button>
+        <button data-mode="3" class="nav-btn"></button>
+        <button data-mode="4" class="nav-btn"></button>
+        <button data-mode="5" class="nav-btn"></button>
+        <select id="lang-select" class="lang-select"></select>
     </nav>
 
     <a href="https://calendar.app.google/4po4kdduppXmE5gi6" target="_blank" class="schedule-btn">
-        <i class="fas fa-calendar-check"></i> Schedule Interview
+        <i class="fas fa-calendar-check"></i> <span id="btn-schedule-text"></span>
     </a>
 
     <a href="https://wa.me/543517146520" target="_blank" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i> WhatsApp Me
+        <i class="fab fa-whatsapp"></i> <span id="btn-whatsapp-text"></span>
     </a>
-              
+
     <main id="app-container">
+
+        <!-- ── DEMOS ─────────────────────────────────────────── -->
         <section id="view-audio" class="view">
             <div class="audio-header">
-                <h1>My Demos</h1>
-                <p>A collection of my voice acting work.</p>
+                <h1 id="demos-title"></h1>
+                <p  id="demos-subtitle"></p>
             </div>
-            <div id="demos-grid" class="demos-grid">
-                <!-- Demo cards will be inserted here by script.js -->
-                <p>Loading demos...</p>
+            <div id="demos-grid" class="demos-grid"></div>
+        </section>
+
+        <!-- ── CV ───────────────────────────────────────────── -->
+        <section id="view-professional" class="view">
+            <div class="cv-container" id="cv-container">
+                <!-- Rendered by script.js from content.js -->
             </div>
         </section>
-        
-        <section id="view-professional" class="view">
-            <div class="cv-container">
-                <aside class="cv-sidebar">
-                    <div class="portrait-container">
-                        <img src="img/pp.jpeg" alt="Maximo Appendino" class="cv-portrait">
-                    </div>
-                    <div class="sidebar-section">
-                        <h4>Contact</h4>
-                        <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:maximoappendinopadilla@gmail.com">maximoappendinopadilla@gmail.com</a></p>
-                        <p><i class="fas fa-phone"></i> +54 9 351 714-6520</p>
-                        <p><i class="fas fa-phone"></i> +44 1217519880</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <h4>Languages</h4>
-                        <p>🇦🇷 Spanish: Native</p>
-                        <p>🇬🇧 English: Professional</p>
-                        <p>🇮🇹 Italian: Conversational</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <h4>Availability</h4>
-                        <p>Immediate / Full-time</p>
-                        <p>Remote & On-site</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <h4>Job Interests</h4>
-                        <p>Software Development, Professional Translation, Voice Acting, Sales & Operations.</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <h4>Relocation</h4>
-                        <p>Open to international relocation.</p>
-                    </div>
-                    <div class="sidebar-section">
-                        <h4>Visas & Access</h4>
-                        <ul class="visa-list">
-                            <li>USA Visa</li>
-                            <li>European Union Access</li>
-                            <li>Spain</li>
-                            <li>Italy</li>
-                            <li>United Kingdom</li>
-                        </ul>
-                    </div>
-                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="maximoappendino" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ar.linkedin.com/in/maximoappendino?trk=profile-badge">Maximo Appendino</a></div>
-              
 
-                </aside>
-                <div class="cv-main">
-                    <header class="cv-header">
-                        <h1>Maximo Appendino</h1>
-                        <p>Salesman, Software Developer, Voice Actor & Medical, Legal, Financial Interpreter</p>
-                    </header>
-                    <hr>
-                    <div class="cv-content">
-                <div class="cv-section">
-                    <h3>Work Experience (Newest to oldest)</h3>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Operations & Full Stack Developer @ Papaya</h4>
-                            <span class="location">Chicago, US</span>
-                            <span class="date">2025 - 2026</span>
-                            <p>I began my role at Papaya as a tutor in English and Mathematics, applying and further developing the skills I had previously acquired at Like Institute. Over time, I transitioned into an Operations role, taking on greater technical and organizational responsibilities, where I designed and implemented a new system, building its database as well as its back-end and front-end components. I also developed monitoring tools to improve operational efficiency, managed support tickets, and ensured the accuracy of scheduling for both students and tutors. My tenure at Papaya came to an end due to the company’s financial difficulties, which ultimately led to bankruptcy and widespread staff reductions.</p>
-                        </div>
-                        <a href="https://papayatutor.com" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-papaya.jpeg" alt="Papaya Tutors Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Travel Agent @ Reservation Desk, Reservation Counter, Travelpass</h4>
-                            <span class="location">Utah, US</span>
-                            <span class="date">2024 - 2026</span>
-                            <p>Successfully completed rigorous sales training and consistently applied a high sense of urgency to drive conversions within a structured sales framework. While adhering to strict corporate protocols, I leveraged the creative flexibility allowed within the process to adapt my persuasive approach to a diverse array of customer personalities and needs. This role served as a dynamic environment for refining advanced sales techniques, particularly through high-volume outbound cold-calling aimed at promoting exclusive travel experiences. Recognized as a top performer, I demonstrated exceptional sales acumen and was awarded a Smart TV for excellence during a high-stakes sales competition. Initially focused on exhaustive consultation, I rapidly evolved my strategy toward a more assertive, fast-paced closing style, significantly reducing average handle time while increasing success rates. I developed robust resilience in managing complex rejections, technical credit card processing issues, and high-pressure negotiations, consistently going above and beyond to secure the optimal arrangements for clients while maintaining a "now or never" closing philosophy.</p>
-                        </div>
-                        <a href="https://www.reservationdesk.com" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-reservation-desk.svg" alt="Reservation Desk Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Medical, Legal & Financial Interpreter @ Propio Language Services</h4>
-                            <span class="location">Kansas, US</span>
-                            <span class="date">2022 - 2024</span>
-                            <p>Provided professional consecutive translation and interpretation services in both English and Spanish. This was a demanding role that allowed me to gain rewarding experience working alongside doctors, legal professionals, law enforcement, and sales teams. Although I worked remotely, I utilized traditional note-taking techniques. While initially slower than keyboard users, my proficiency and speed in shorthand improved significantly over time.</p>
-                        </div>
-                        <a href="https://propio.com" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-propio.png" alt="Propio Language Services Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>English Teacher @ Like Institute</h4>
-                            <span class="location">Rio Ceballos, Cordoba, Argentina</span>
-                            <span class="date">2021 - 2022</span>
-                            <p>English teacher at Like Institute, focusing on language development and student engagement in a dynamic learning environment.</p>
-                        </div>
-                        <a href="https://likeinstitute.com/" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-like-institute.png" alt="Like Institute Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Salesman @ Royal Prestige</h4>
-                            <span class="location">Cordoba, Cordoba, Argentina</span>
-                            <span class="date">2020 - 2021</span>
-                            <p>Executed a high-intensity direct sales strategy centered on cold-calling and conducting live product demonstrations to secure immediate on-the-spot closures. A critical component of the role involved strategic lead generation and referral management to ensure a continuous sales pipeline. Despite entering the field at a young age, I achieved significant financial success and discovered a profound passion for interpersonal connection and the psychological complexities of the sales industry. This experience solidified my commitment to professional sales, proving my ability to build rapport quickly, handle high-pressure environments, and find genuine satisfaction in achieving ambitious targets through direct client engagement.</p>
-                        </div>
-                        <a href="https://www.royalprestige.com/" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-royal-prestige.jpg" alt="Royal Prestige Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                </div>
-                <div class="cv-section">
-                    <h3>Education</h3>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Computer Scientist @ FAMAF - UNC - Argentina</h4>
-                            <span class="date">2026 - present</span>
-                            <p>Engaged in math competitions and various projects related to programming and computing data. This career follows years of self-taught programming and a deep interest in computer operations.</p>
-                        </div>
-                        <a href="https://www.famaf.unc.edu.ar" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-famaf.jpg" alt="FAMAF Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Legal Translator @ Faculty of Languages (FL) - UNC - Argentina</h4>
-                            <span class="date">2021 - 2024</span>
-                            <p>Completed thesis practice during this program, which significantly advanced my English proficiency and understanding of linguistics. The curriculum had a strong focus on British English and IPA pronunciation.</p>
-                        </div>
-                        <a href="https://lenguas.unc.edu.ar" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-fl.png" alt="Facultad de Lenguas Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Psychology @ UNC - Argentina</h4>
-                            <span class="date">2020 - 2021</span>
-                            <p>Indulged in theoretical studies, history, and biology. My studies took place during the pandemic, providing a unique perspective on human behavior and psychological theory.</p>
-                        </div>
-                        <a href="https://www.unc.edu.ar/acad%C3%A9micas/facultad-de-psicolog%C3%ADa" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-psicologia.jpg" alt="Facultad de Psicologia Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-text">
-                            <h4>Instituto Educativo Nuevo Milenio (IENM) - Unquillo, Cordoba, Argentina</h4>
-                            <span class="date">2014 - 2020</span>
-                            <p>High School Diploma with a specialization in Communication. Developed foundational skills in media and interpersonal communication.</p>
-                        </div>
-                        <a href="https://ienm.edu.ar/" target="_blank" class="cv-logo-link">
-                            <img src="img/cv-ienm.webp" alt="IENM Logo" class="cv-logo-img">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="cv-section">
-                    <h3>Software Experience</h3>
-                    <div class="software-grid">
-                        <div class="software-category">
-                            <h5>Graphical Engines</h5>
-                            <ul>
-                                <li><a href="https://sbox.game/" target="_blank"><i class="fas fa-cube"></i> S&Box</a> <span class="years">8 Months</span></li>
-                                <li><a href="https://unity.com/" target="_blank"><i class="fab fa-unity"></i> Unity</a> <span class="years">3 Years</span></li>
-                                <li><a href="https://www.unrealengine.com/" target="_blank"><i class="fas fa-ghost"></i> Unreal Engine</a> <span class="years">2 Years</span></li>
-                                <li><a href="https://godotengine.org/" target="_blank"><i class="fas fa-robot"></i> Godot</a> <span class="years">2 Years</span></li>
-                                <li><a href="https://www.vulkan.org/" target="_blank"><i class="fas fa-microchip"></i> Vulkan</a> <span class="years">1 Year</span></li>
-                                <li><a href="https://www.opengl.org/" target="_blank"><i class="fas fa-code"></i> OpenGL</a> <span class="years">2 Years</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="software-category">
-                            <h5>Programming</h5>
-                            <ul>
-                                <li><a href="https://isocpp.org/" target="_blank"><i class="fab fa-cuttlefish"></i> C++</a> <span class="years">7 Years</span></li>
-                                <li><a href="https://www.python.org/" target="_blank"><i class="fab fa-python"></i> Python</a> <span class="years">8 Years</span></li>
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><i class="fab fa-js"></i> JavaScript</a> <span class="years">9 Years</span></li>
-                                <li><a href="https://www.java.com/" target="_blank"><i class="fab fa-java"></i> Java</a> <span class="years">6 Years</span></li>
-                                <li><a href="https://nodejs.org/" target="_blank"><i class="fab fa-node-js"></i> NodeJS</a> <span class="years">7 Years</span></li>
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><i class="fab fa-html5"></i> HTML</a> <span class="years">10 Years</span></li>
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i class="fab fa-css3-alt"></i> CSS</a> <span class="years">10 Years</span></li>
-                                <li><a href="https://react.dev/" target="_blank"><i class="fab fa-react"></i> React</a> <span class="years">5 Years</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="software-category">
-                            <h5>Adobe Tools</h5>
-                            <ul>
-                                <li><a href="https://www.adobe.com/products/photoshop.html" target="_blank"><i class="fas fa-paint-brush"></i> Photoshop</a> <span class="years">12 Years</span></li>
-                                <li><a href="https://www.adobe.com/products/illustrator.html" target="_blank"><i class="fas fa-pen-nib"></i> Illustrator</a> <span class="years">10 Years</span></li>
-                                <li><a href="https://www.adobe.com/products/premiere.html" target="_blank"><i class="fas fa-video"></i> Premiere</a> <span class="years">9 Years</span></li>
-                                <li><a href="https://www.adobe.com/products/indesign.html" target="_blank"><i class="fas fa-file-alt"></i> InDesign</a> <span class="years">8 Years</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="software-category">
-                            <h5>Office Suites</h5>
-                            <ul>
-                                <li><a href="https://www.libreoffice.org/" target="_blank"><i class="fas fa-file-word"></i> Writer / Word</a> <span class="years">15 Years</span></li>
-                                <li><a href="https://www.libreoffice.org/" target="_blank"><i class="fas fa-file-excel"></i> Calc / Excel</a> <span class="years">12 Years</span></li>
-                                <li><a href="https://www.libreoffice.org/" target="_blank"><i class="fas fa-file-powerpoint"></i> Impress / PPT</a> <span class="years">10 Years</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="software-category">
-                            <h5>3D / 2D Design</h5>
-                            <ul>
-                                <li><a href="https://krita.org/" target="_blank"><i class="fas fa-palette"></i> Krita</a> <span class="years">5 Years</span></li>
-                                <li><a href="https://www.blender.org/" target="_blank"><i class="fas fa-shapes"></i> Blender</a> <span class="years">3 Years</span></li>
-                                <li><a href="https://www.aseprite.org/" target="_blank"><i class="fas fa-th"></i> Aseprite</a> <span class="years">4 Years</span></li>
-                                <li><a href="https://inkscape.org/" target="_blank"><i class="fas fa-vector-square"></i> InkScape</a> <span class="years">2 Years</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="software-category">
-                            <h5>GTM & Sales Tech</h5>
-                            <ul>
-                                <li><a href="https://www.clay.com/" target="_blank"><i class="fas fa-database"></i> Clay</a> <span class="years">3 Years</span></li>
-                                <li><a href="https://www.apollo.io/" target="_blank"><i class="fas fa-rocket"></i> Apollo</a> <span class="years">4 Years</span></li>
-                                <li><a href="https://www.hubspot.com/" target="_blank"><i class="fab fa-hubspot"></i> HubSpot</a> <span class="years">4 Years</span></li>
-                                <li><a href="https://clearbit.com/" target="_blank"><i class="fas fa-bullseye"></i> Clearbit</a> <span class="years">3 Years</span></li>
-                                <li><a href="https://www.zoominfo.com/" target="_blank"><i class="fas fa-search-plus"></i> ZoomInfo</a> <span class="years">4 Years</span></li>
-                                <li><a href="https://www.datanyze.com/" target="_blank"><i class="fas fa-chart-line"></i> Datanyze</a> <span class="years">2 Years</span></li>
-                                <li><a href="https://www.leadgenius.com/" target="_blank"><i class="fas fa-user-check"></i> LeadGenius</a> <span class="years">2 Years</span></li>
-                                <li><a href="https://www.zoho.com/" target="_blank"><i class="fas fa-cloud"></i> Zoho</a> <span class="years">5 Years</span></li>
-                                <li><a href="https://www.creatio.com/" target="_blank"><i class="fas fa-cog"></i> Creatio</a> <span class="years">2 Years</span></li>
-                                <li><a href="https://www.salesforce.com/" target="_blank"><i class="fab fa-salesforce"></i> Salesforce</a> <span class="years">4 Years</span></li>
-                                <li><a href="https://www.lemlist.com/" target="_blank"><i class="fas fa-paper-plane"></i> Lemlist</a> <span class="years">3 Years</span></li>
-                                <li><a href="https://instantly.ai/" target="_blank"><i class="fas fa-envelope-open-text"></i> Instantly.ai</a> <span class="years">2 Years</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="software-category">
-                            <h5>Preferred OS</h5>
-                            <ul>
-                                <li><a href="https://fedoraproject.org/" target="_blank"><i class="fab fa-fedora"></i> Fedora</a></li>
-                                <li><a href="https://archlinux.org/" target="_blank"><i class="fas fa-linux"></i> Arch</a></li>
-                                <li><a href="https://nixos.org/" target="_blank"><i class="fas fa-snowflake"></i> NixOS</a></li>
-                                <li><a href="https://www.gentoo.org/" target="_blank"><i class="fas fa-terminal"></i> Gentoo</a></li>
-                                <li><a href="https://ubuntu.com/" target="_blank"><i class="fab fa-ubuntu"></i> Ubuntu</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="qr-container" style="text-align: center; margin-top: 40px;">
-                    <p>Scan to visit my website:</p>
-                    <img src="img/qr.svg" alt="QR Code" style="max-width: 150px; margin-top: 10px; border: 1px solid #ddd; padding: 10px; border-radius: 8px;">
-                </div>
-                <div>
-                    <h3>How to use this website</h3>
-                    <p>I recommend navigating through the tabs at the top by clicking them or typing 1, 2, 3, 4, 5 while on the page.</p>
-                    <br>
-                    <h3>Notes</h3>
-                    <p>If you are viewing this via PDF, you can access my complete portfolio at:</p>
-                    <a href="https://maximoappendino.github.io">https://maximoappendino.github.io</a>
-                    <p>Visit the website to access interactive features and my voice acting demos.</p>
-                    
-                    <!-- GoatCounter View Badge -->
-                    <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
-                        <a href="https://maximoappendino.goatcounter.com" target="_blank" style="text-decoration: none; color: #888; font-size: 0.8rem; display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-chart-line"></i> Total Views: 
-                            <img src="https://maximoappendino.goatcounter.com/counter/total.svg" alt="Views" style="height: 1.2em; vertical-align: middle;">
-                        </a>
-                    </div>
-                </div>
-            </div> <!-- cv-main -->
-        </div> <!-- cv-container -->
-    </section>
-
+        <!-- ── CODING ────────────────────────────────────────── -->
         <section id="view-coding" class="view">
             <div class="scanlines"></div>
             <div class="retro-container">
-                <a href="https://github.com/maximoappendino"><h1 class="blink">>> MY_GITHUB</h1></a>
-                <marquee scrollamount="10" class="scrolling-text"> * BASH * HTML5 * CSS3 * JAVASCRIPT * PYTHON * NODEJS * C++ * RUST</marquee>
-                
+                <a id="coding-github-link" href="" target="_blank">
+                    <h1 id="coding-title" class="blink"></h1>
+                </a>
+                <marquee id="coding-scrolling" scrollamount="10" class="scrolling-text"></marquee>
+
                 <div class="retro-grid">
                     <div class="retro-box full-width">
-                        <h3>// GITHUB_ACTIVITY_MONITOR</h3>
+                        <h3 id="coding-activity-label"></h3>
                         <div id="activity-container">
-                            <img id="gh-activity-graph" src="https://github-readme-activity-graph.vercel.app/graph?username=maximoappendino&theme=react-dark&bg_color=000000&color=0f0&line=0f0&point=0f0&area=true&hide_border=true" alt="GitHub Activity" style="width: 100%; border: 1px solid #0f0; margin-top: 10px;">
+                            <img id="gh-activity-graph" src="" alt="GitHub Activity"
+                                 style="width:100%; border:1px solid #0f0; margin-top:10px;">
                         </div>
                     </div>
                     <div class="retro-box">
-                        <h3>// REPOSITORIES_DATA</h3>
-                        <ul id="repo-list">
-                            <li>[SYSTEM] Accessing GitHub API...</li>
-                            <li>[SYSTEM] Loading repository data...</li>
-                        </ul>
+                        <h3 id="coding-repos-label"></h3>
+                        <ul id="repo-list"></ul>
                     </div>
                     <div class="retro-box">
-                       <h3>// CURRENT_OBJECTIVES</h3>
-                          <ul id="work-in-progress">
-                              <li>> [RUNNING] HTML/CSS/JS Mastery for local e-commerce solutions</li>
-                              <li>> [RUNNING] Professional Voice Acting Studio construction</li>
-                              <li>> [RUNNING] Academic Excellence @ FAMAF (Computer Science)</li>
-                              <li>> [PENDING] Global travel & networking expansion (ETA: 2030)</li>
-                          </ul>
+                        <h3 id="coding-objectives-label"></h3>
+                        <ul id="work-in-progress"></ul>
                     </div>
                 </div>
+
                 <div class="terminal-footer">
-                    <p>Total memory: 640K... OK</p>
+                    <p id="coding-footer"></p>
                 </div>
             </div>
         </section>
 
+        <!-- ── FUTURE ────────────────────────────────────────── -->
         <section id="view-future" class="view">
             <div class="parchment">
-                <h2 class="medieval-title">The Grand Prophecy</h2>
-                <div class="vertical-timeline">
-                    <!-- Timeline Item 1 -->
-                    <article class="timeline-item">
-                        <div class="timeline-year">2026</div>
-                        <div class="timeline-content">
-                            <div class="text-content">
-                                <h3>New Year, New Possibilities</h3>
-                                <p>This year, I aim to secure a position that aligns with my long-term career goals in software development, voice acting, or sales. I am dedicated to excelling in my university studies by focusing on mathematics and advanced technical skills. I also plan to adopt a more disciplined routine to further my personal and professional growth.</p>
-                            </div>
-                            <img src="img/future-eye-of-the-tiger.jpeg" alt="Eye of the Tiger">
-                        </div>
-                    </article>
-
-                    <!-- Timeline Item 2 -->
-                    <article class="timeline-item">
-                        <div class="timeline-year">2030</div>
-                        <div class="timeline-content">
-                            <div class="text-content">
-                                <h3>Traveling Abroad</h3>
-                                <p>By 2030, I envision myself traveling across Europe, building a strong professional network, and working on large-scale projects that I am passionate about. My goal is to establish a business that creates opportunities for others and leverages my technical background. By this time, I expect to have completed my university degree and finished building my personal data center.</p>
-                            </div>
-                            <img src="img/future-business.jpg" alt="Business Meeting">
-                        </div>
-                    </article>
-
-                    <!-- Timeline Item 3 -->
-                    <article class="timeline-item">
-                        <div class="timeline-year">2035</div>
-                        <div class="timeline-content">
-                            <div class="text-content">
-                                <h3>Building Our New Home</h3>
-                                <p>By 2035, I hope to have established a home for my wife and me. For years, I have dreamed of looking out of our window at a beautiful sunset, sharing that moment with the love of my life.</p>
-                            </div>
-                            <img src="img/future-sunset.avif" alt="Couple watching sunset">
-                        </div>
-                    </article>
-                </div>
+                <h2 id="future-title" class="medieval-title"></h2>
+                <div id="future-timeline" class="vertical-timeline"></div>
             </div>
         </section>
 
+        <!-- ── PERSONAL / BLOG ───────────────────────────────── -->
         <section id="view-personal" class="view">
             <div class="blog-header">
-                <h1>Just Me.</h1>
-                <p>Thoughts, coffee, and pixels.</p>
+                <h1 id="personal-title"></h1>
+                <p  id="personal-subtitle"></p>
             </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card" data-blog-id="morning-routine">
-                    <div class="blog-img" style="background-image: url('img/blog-sunrise.jpeg'); background-size: cover; background-position: center;"></div>
-                    <div class="blog-card-content">
-                        <h3>My Morning Routine</h3>
-                        <p>Why I wake up at 5 AM to run...</p>
-                    </div>
-                    <a href="#">Read More</a>
-                </article>
-                <article class="blog-card" data-blog-id="games">
-                    <div class="blog-img" style="background-image: url('img/blog-arcade.jpg'); background-size: cover; background-position: center;"></div>
-                    <div class="blog-card-content">
-                        <h3>All-Time Favourites</h3>
-                        <p>These are the games that shaped my soul.</p>
-                    </div>
-                    <a href="#">Read More</a>
-                </article>
-                <article class="blog-card" data-blog-id="lost-media">
-                    <div class="blog-img" style="background-image: url('img/blog-popeye.jpeg'); background-size: cover; background-position: center;"></div>
-                    <div class="blog-card-content">
-                        <h3>Preserving Lost Media</h3>
-                        <p>How I host media to preserve culture for future generations.</p>
-                    </div>
-                    <a href="#">Read More</a>
-                </article>
-                <article class="blog-card" data-blog-id="computers">
-                    <div class="blog-img" style="background-image: url('img/blog-computer.webp'); background-size: cover; background-position: center;"></div>
-                    <div class="blog-card-content">
-                        <h3>How I Got into Computers</h3>
-                        <p>Ever since I was young, I've enjoyed using computers and troubleshooting various errors. I have certainly faced many along the way.</p>
-                    </div>
-                    <a href="#">Read More</a>
-                </article>
-                <article class="blog-card" data-blog-id="discipline">
-                    <div class="blog-img" style="background-image: url('img/blog-discipline.jpg'); background-size: cover; background-position: center;"></div>
-                    <div class="blog-card-content">
-                        <h3>Discipline and Nature</h3>
-                        <p>This is the story of how I pushed my limits to grow stronger, both physically and mentally. It has been a journey of discipline and resilience.</p>
-                    </div>
-                    <a href="#">Read More</a>
-                </article>
-            </div>
-
-            <!-- Hidden Blog Content -->
-            <div id="blog-content-source" style="display: none;">
-                <div id="content-morning-routine">
-                    <h1>My Morning Routine</h1>
-                    <p>Waking up at 5 AM isn't for everyone, but for me, it's a game-changer. The quiet stillness of the early morning provides the perfect environment to focus, plan my day, and get a head start on my goals.</p>
-                    <p>My routine usually consists of a 30-minute run, followed by meditation and a healthy breakfast. This combination of physical activity and mindfulness helps me start the day with a clear head and a positive attitude.</p>
-                    <p>Of course, there are days when I'd rather stay in bed, but the benefits of my morning routine far outweigh the temporary discomfort. It's a discipline that has had a profound impact on my productivity and overall well-being.</p>
-                </div>
-                <div id="content-games">
-                    <h1>Games That Shaped Me</h1>
-                    <p>Arcade games and old consoles were a huge part of my life growing up. From the Game Boy Advance to the PlayStation 2, games felt raw, challenging, and full of personality. Titles like Metal Slug, Castlevania, Kirby, Mortal Kombat, Urban Reign, and Resident Evil 4 left a permanent mark on me.</p>
-                    <p>Some games weren’t just entertainment — they were worlds. Skyrim was one of those games that made me lose track of time entirely, while arcade machines taught me persistence through difficulty and repetition.</p>
-                    <p>Modern games still manage to capture that magic sometimes. Outer Wilds and Rain World stand out as experiences that value curiosity, atmosphere, and discovery over hand-holding. They remind me why I fell in love with games in the first place.</p>
-                </div>
-                <div id="content-lost-media">
-                    <h1>Preserving Lost Media</h1>
-                    <p>Preserving media is more than just a hobby; it's a way to ensure that the culture and history captured in old films, music, and software aren't lost to time. By hosting and sharing this media, I hope to contribute to a collective effort to keep our digital heritage alive.</p>
-                    <p>Whether it's an obscure 80s commercial or a piece of software that was almost forgotten, every bit of media tells a story. I find great satisfaction in the technical challenge of rescuing and restoring these digital artifacts.</p>
-                </div>
-                <div id="content-computers">
-                    <h1>How I Got Into Computers</h1>
-                    <p>I’ve been fascinated by computers for as long as I can remember. At first, it was pure curiosity — clicking things, breaking things, and trying to understand why something worked or didn’t.</p>
-                    <p>Over time, that curiosity turned into problem-solving. Fixing errors, tweaking systems, and learning how software interacts with hardware became second nature. Computers stopped being tools and started feeling like systems I could truly understand.</p>
-                    <p>That early exposure shaped the way I think today. I’m comfortable experimenting, failing, and digging deeper until something makes sense. Computers taught me patience, logic, and the value of learning by doing.</p>
-                </div>
-                <div id="content-discipline">
-                    <h1>Discipline, Nature, and the Body</h1>
-                    <p>Meditation, breath control, and martial arts have always felt deeply connected to me. Practices like kung fu and muay thai aren’t just about combat — they’re about discipline, awareness, and understanding how fragile and powerful the human body truly is.</p>
-                    <p>Spending time in nature sharpens that awareness even more. Hiking in the mountains without equipment, free diving, and being fully immersed in water or open air strips life down to its essentials: breath, focus, and movement. Every step and every inhale matters.</p>
-                    <p>There’s something humbling about realizing how deadly techniques can be, and how calm the mind must be to control them. Nature teaches the same lesson — respect it, or it will overwhelm you. Balance is everything.</p>
-                </div>
-            </div>
+            <div id="blog-grid" class="blog-grid"></div>
         </section>
 
     </main>
 
+    <!-- Blog modal -->
     <div id="blog-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <div id="modal-body">
-                <!-- Blog content will be loaded here -->
-            </div>
+            <div id="modal-body"></div>
         </div>
     </div>
 
+    <!-- Content must load before script.js -->
+    <script src="content.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

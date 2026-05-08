@@ -33,6 +33,22 @@ body { font-family: sans-serif; overflow-x: hidden; }
 
 .nav-btn:hover, .nav-btn.active { color: #fff; text-decoration: underline; }
 
+.lang-select {
+    position: absolute;
+    right: 12px;
+    background: #444;
+    border: 1px solid #666;
+    color: #ccc;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.lang-select:hover, .lang-select:focus { background: #555; color: #fff; }
+
 /* --- SCHEDULE BUTTON --- */
 .schedule-btn {
     position: fixed;
